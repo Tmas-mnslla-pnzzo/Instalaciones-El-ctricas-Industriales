@@ -1,0 +1,56 @@
+{
+  "informacion_general": {
+    "nombre_proyecto": "Planta Mecatrónica - Nave 1",
+    "superficie_m2": 450.0,
+    "tension_red_V": 400.0
+  },
+  "tableros": [
+    {
+      "id": "TP",
+      "nombre": "Tablero Principal",
+      "ubicacion_x": 0.0,
+      "ubicacion_y": 0.0
+    },
+    {
+      "id": "TS1",
+      "nombre": "Tablero Seccional 1 (Mecanizado)",
+      "ubicacion_x": 15.0,
+      "ubicacion_y": 5.0
+    }
+  ],
+  "cargas_motrices": [
+    {
+      "id": "M1",
+      "nombre": "Torno CNC",
+      "potencia_kW": 15.0,
+      "rendimiento": 0.85,
+      "cos_phi": 0.80,
+      "tablero_origen": "TS1",
+      "ubicacion_x": 18.0,
+      "ubicacion_y": 9.0,
+      "factor_utilizacion": 0.8
+    },
+    {
+      "id": "M2",
+      "nombre": "Fresadora",
+      "potencia_kW": 22.0,
+      "rendimiento": 0.88,
+      "cos_phi": 0.82,
+      "tablero_origen": "TS1",
+      "ubicacion_x": 20.0,
+      "ubicacion_y": 2.0,
+      "factor_utilizacion": 0.7
+    },
+    {
+      "id": "C1",
+      "nombre": "Compresor de Aire",
+      "potencia_kW": 30.0,
+      "rendimiento": 0.90,
+      "cos_phi": 0.85,
+      "tablero_origen": "TP",
+      "ubicacion_x": 5.0,
+      "ubicacion_y": -5.0,
+      "factor_utilizacion": 1.0
+    }
+  ]
+}
