@@ -1,0 +1,93 @@
+{
+  "_comentario": "Datos de iluminación calculados por separado (método cavidades zonales u otro).",
+  "_campos": {
+    "tablero": "ID del tablero seccional que alimenta este circuito de iluminación",
+    "zona": "Nombre descriptivo de la zona/sector",
+    "marca": "Marca/modelo de la luminaria",
+    "tension_V": "Tensión de alimentación en Voltios",
+    "potencia_W": "Potencia por unidad de luminaria en Watts",
+    "cos_phi": "Factor de potencia de la luminaria (1.0 para LED, ~0.9 para fluorescente)",
+    "cantidad": "Número de luminarias en el circuito",
+    "factor_utilizacion": "Factor de utilización del circuito (tipicamente 0.9)",
+    "factor_simultaneidad": "Factor de simultaneidad del tablero (tipicamente 1.0 para iluminación)"
+  },
+  "circuitos": [
+    {
+      "tablero": "TS1",
+      "zona": "Nave principal - sector mecanizado",
+      "marca": "Rooster Lighting",
+      "tension_V": 220.0,
+      "potencia_W": 76.0,
+      "cos_phi": 1.0,
+      "cantidad": 57,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    },
+    {
+      "tablero": "TS2",
+      "zona": "Oficinas",
+      "marca": "NORKA",
+      "tension_V": 220.0,
+      "potencia_W": 6.5,
+      "cos_phi": 1.0,
+      "cantidad": 27,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    },
+    {
+      "tablero": "TS3",
+      "zona": "Pasillo central",
+      "marca": "NORKA",
+      "tension_V": 220.0,
+      "potencia_W": 61.7,
+      "cos_phi": 1.0,
+      "cantidad": 25,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    },
+    {
+      "tablero": "TS5",
+      "zona": "Depósito",
+      "marca": "NORKA",
+      "tension_V": 220.0,
+      "potencia_W": 88.0,
+      "cos_phi": 1.0,
+      "cantidad": 14,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    },
+    {
+      "tablero": "TS6",
+      "zona": "Sector soldadura",
+      "marca": "NORKA",
+      "tension_V": 220.0,
+      "potencia_W": 76.0,
+      "cos_phi": 1.0,
+      "cantidad": 32,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    },
+    {
+      "tablero": "TS7",
+      "zona": "Sector ensamble",
+      "marca": "NORKA",
+      "tension_V": 220.0,
+      "potencia_W": 76.0,
+      "cos_phi": 1.0,
+      "cantidad": 41,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    },
+    {
+      "tablero": "TS8",
+      "zona": "Exterior / playa de carga",
+      "marca": "NORKA",
+      "tension_V": 220.0,
+      "potencia_W": 76.0,
+      "cos_phi": 1.0,
+      "cantidad": 45,
+      "factor_utilizacion": 0.9,
+      "factor_simultaneidad": 1.0
+    }
+  ]
+}

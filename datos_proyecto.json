@@ -1,56 +1,122 @@
 {
   "informacion_general": {
-    "nombre_proyecto": "Planta Mecatrónica - Nave 1",
+    "nombre_proyecto": "Planta Industrial - Ponzoni",
+    "autor": "Gonzalo Elstein",
     "superficie_m2": 450.0,
-    "tension_red_V": 400.0
+    "tension_red_V": 380.0,
+    "potencia_cc_mva": 80.0,
+    "zcc_ohm": 0.53,
+    "tiempo_cc_s": 0.02,
+    "k_aislante": 115.0,
+    "delta_u_max_V": 20.0,
+    "cos_phi_objetivo": 0.95,
+    "factor_reserva": 1.30
   },
   "tableros": [
+    {"id": "TG",   "nombre": "Tablero General",        "ubicacion_x": 0.0,  "ubicacion_y": 0.0},
+    {"id": "TS4",  "nombre": "Tablero Seccional 4",    "ubicacion_x": 10.0, "ubicacion_y": 0.0},
+    {"id": "CCM1", "nombre": "Centro Control Motores 1","ubicacion_x": 0.0,  "ubicacion_y": 0.0},
+    {"id": "CCM2", "nombre": "Centro Control Motores 2","ubicacion_x": 10.0, "ubicacion_y": 0.0},
+    {"id": "CCM3", "nombre": "Centro Control Motores 3","ubicacion_x": 10.0, "ubicacion_y": 0.0},
+    {"id": "CCM4", "nombre": "Centro Control Motores 4","ubicacion_x": 10.0, "ubicacion_y": 0.0},
+    {"id": "CCM5", "nombre": "Centro Control Motores 5","ubicacion_x": 0.0,  "ubicacion_y": 0.0}
+  ],
+  "ccms": [
     {
-      "id": "TP",
-      "nombre": "Tablero Principal",
-      "ubicacion_x": 0.0,
-      "ubicacion_y": 0.0
+      "id": "CCM1", "tablero_origen": "TG", "factor_simultaneidad": 0.80,
+      "motores": [
+        {"id": "B1", "corriente_A": 285.994, "cos_phi": 0.85,  "potencia_activa_kW": 160.0, "potencia_reactiva_kVAr": 57.25,  "potencia_aparente_kVA": 169.934, "zcc": 0.53, "distancia_cc_km": 2.15, "factor_utilizacion": 0.750},
+        {"id": "B2", "corriente_A": 285.994, "cos_phi": 0.85,  "potencia_activa_kW": 160.0, "potencia_reactiva_kVAr": 57.25,  "potencia_aparente_kVA": 169.934, "zcc": 0.53, "distancia_cc_km": 2.20, "factor_utilizacion": 0.755},
+        {"id": "B3", "corriente_A": 285.994, "cos_phi": 0.85,  "potencia_activa_kW": 160.0, "potencia_reactiva_kVAr": 57.25,  "potencia_aparente_kVA": 169.934, "zcc": 0.53, "distancia_cc_km": 2.25, "factor_utilizacion": 0.760},
+        {"id": "B4", "corriente_A": 285.994, "cos_phi": 0.85,  "potencia_activa_kW": 160.0, "potencia_reactiva_kVAr": 57.25,  "potencia_aparente_kVA": 169.934, "zcc": 0.53, "distancia_cc_km": 2.30, "factor_utilizacion": 0.765}
+      ]
     },
     {
-      "id": "TS1",
-      "nombre": "Tablero Seccional 1 (Mecanizado)",
-      "ubicacion_x": 15.0,
-      "ubicacion_y": 5.0
+      "id": "CCM2", "tablero_origen": "TS4", "factor_simultaneidad": 0.80,
+      "motores": [
+        {"id": "C1", "corriente_A": 261.704, "cos_phi": 0.905, "potencia_activa_kW": 90.0, "potencia_reactiva_kVAr": 42.306, "potencia_aparente_kVA": 99.447,  "zcc": 0.53, "distancia_cc_km": 3.30, "factor_utilizacion": 0.765},
+        {"id": "C2", "corriente_A": 261.704, "cos_phi": 0.905, "potencia_activa_kW": 90.0, "potencia_reactiva_kVAr": 42.306, "potencia_aparente_kVA": 99.447,  "zcc": 0.53, "distancia_cc_km": 4.30, "factor_utilizacion": 0.766},
+        {"id": "C3", "corriente_A": 261.704, "cos_phi": 0.905, "potencia_activa_kW": 90.0, "potencia_reactiva_kVAr": 42.306, "potencia_aparente_kVA": 99.447,  "zcc": 0.53, "distancia_cc_km": 5.30, "factor_utilizacion": 0.767},
+        {"id": "C4", "corriente_A": 230.083, "cos_phi": 0.915, "potencia_activa_kW": 80.0, "potencia_reactiva_kVAr": 35.275, "potencia_aparente_kVA": 87.432,  "zcc": 0.53, "distancia_cc_km": 2.40, "factor_utilizacion": 0.768}
+      ]
+    },
+    {
+      "id": "CCM3", "tablero_origen": "TS4", "factor_simultaneidad": 0.80,
+      "motores": [
+        {"id": "C5", "corriente_A": 228.833, "cos_phi": 0.920, "potencia_activa_kW": 80.0, "potencia_reactiva_kVAr": 34.080, "potencia_aparente_kVA": 86.957,  "zcc": 0.53, "distancia_cc_km": 2.45, "factor_utilizacion": 0.780},
+        {"id": "C6", "corriente_A": 227.596, "cos_phi": 0.925, "potencia_activa_kW": 80.0, "potencia_reactiva_kVAr": 32.862, "potencia_aparente_kVA": 86.486,  "zcc": 0.53, "distancia_cc_km": 2.50, "factor_utilizacion": 0.785},
+        {"id": "C7", "corriente_A": 169.779, "cos_phi": 0.930, "potencia_activa_kW": 60.0, "potencia_reactiva_kVAr": 23.713, "potencia_aparente_kVA": 64.516,  "zcc": 0.53, "distancia_cc_km": 2.55, "factor_utilizacion": 0.790},
+        {"id": "C8", "corriente_A": 168.871, "cos_phi": 0.935, "potencia_activa_kW": 60.0, "potencia_reactiva_kVAr": 22.758, "potencia_aparente_kVA": 64.171,  "zcc": 0.53, "distancia_cc_km": 2.60, "factor_utilizacion": 0.795},
+        {"id": "C9", "corriente_A": 168.871, "cos_phi": 0.935, "potencia_activa_kW": 60.0, "potencia_reactiva_kVAr": 22.758, "potencia_aparente_kVA": 64.171,  "zcc": 0.53, "distancia_cc_km": 3.60, "factor_utilizacion": 0.800}
+      ]
+    },
+    {
+      "id": "CCM4", "tablero_origen": "TS4", "factor_simultaneidad": 0.85,
+      "motores": [
+        {"id": "D1", "corriente_A": 6.437, "cos_phi": 0.915, "potencia_activa_kW": 2.238, "potencia_reactiva_kVAr": 0.987, "potencia_aparente_kVA": 2.446, "zcc": 0.53, "distancia_cc_km": 2.15, "factor_utilizacion": 0.775},
+        {"id": "D2", "corriente_A": 6.402, "cos_phi": 0.920, "potencia_activa_kW": 2.238, "potencia_reactiva_kVAr": 0.953, "potencia_aparente_kVA": 2.432, "zcc": 0.53, "distancia_cc_km": 2.20, "factor_utilizacion": 0.780},
+        {"id": "D3", "corriente_A": 6.367, "cos_phi": 0.925, "potencia_activa_kW": 2.238, "potencia_reactiva_kVAr": 0.919, "potencia_aparente_kVA": 2.419, "zcc": 0.53, "distancia_cc_km": 2.25, "factor_utilizacion": 0.785},
+        {"id": "D4", "corriente_A": 2.111, "cos_phi": 0.930, "potencia_activa_kW": 0.746, "potencia_reactiva_kVAr": 0.295, "potencia_aparente_kVA": 0.802, "zcc": 0.53, "distancia_cc_km": 2.30, "factor_utilizacion": 0.790},
+        {"id": "D5", "corriente_A": 2.100, "cos_phi": 0.935, "potencia_activa_kW": 0.746, "potencia_reactiva_kVAr": 0.283, "potencia_aparente_kVA": 0.798, "zcc": 0.53, "distancia_cc_km": 2.35, "factor_utilizacion": 0.795},
+        {"id": "D6", "corriente_A": 2.088, "cos_phi": 0.940, "potencia_activa_kW": 0.746, "potencia_reactiva_kVAr": 0.271, "potencia_aparente_kVA": 0.794, "zcc": 0.53, "distancia_cc_km": 2.40, "factor_utilizacion": 0.800}
+      ]
+    },
+    {
+      "id": "CCM5", "tablero_origen": "TG", "factor_simultaneidad": 0.80,
+      "motores": [
+        {"id": "A1", "corriente_A": 357.492, "cos_phi": 0.85, "potencia_activa_kW": 200.0, "potencia_reactiva_kVAr": 71.562, "potencia_aparente_kVA": 212.417, "zcc": 0.52, "distancia_cc_km": 2.35, "factor_utilizacion": 0.770}
+      ]
     }
   ],
   "cargas_motrices": [
-    {
-      "id": "M1",
-      "nombre": "Torno CNC",
-      "potencia_kW": 15.0,
-      "rendimiento": 0.85,
-      "cos_phi": 0.80,
-      "tablero_origen": "TS1",
-      "ubicacion_x": 18.0,
-      "ubicacion_y": 9.0,
-      "factor_utilizacion": 0.8
-    },
-    {
-      "id": "M2",
-      "nombre": "Fresadora",
-      "potencia_kW": 22.0,
-      "rendimiento": 0.88,
-      "cos_phi": 0.82,
-      "tablero_origen": "TS1",
-      "ubicacion_x": 20.0,
-      "ubicacion_y": 2.0,
-      "factor_utilizacion": 0.7
-    },
-    {
-      "id": "C1",
-      "nombre": "Compresor de Aire",
-      "potencia_kW": 30.0,
-      "rendimiento": 0.90,
-      "cos_phi": 0.85,
-      "tablero_origen": "TP",
-      "ubicacion_x": 5.0,
-      "ubicacion_y": -5.0,
-      "factor_utilizacion": 1.0
-    }
+    {"id": "B1", "nombre": "Motor B1", "potencia_kW": 160.0, "rendimiento": 0.88, "cos_phi": 0.85,  "tablero_origen": "CCM1", "ubicacion_x": 215.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.750},
+    {"id": "B2", "nombre": "Motor B2", "potencia_kW": 160.0, "rendimiento": 0.88, "cos_phi": 0.85,  "tablero_origen": "CCM1", "ubicacion_x": 220.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.755},
+    {"id": "B3", "nombre": "Motor B3", "potencia_kW": 160.0, "rendimiento": 0.88, "cos_phi": 0.85,  "tablero_origen": "CCM1", "ubicacion_x": 225.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.760},
+    {"id": "B4", "nombre": "Motor B4", "potencia_kW": 160.0, "rendimiento": 0.88, "cos_phi": 0.85,  "tablero_origen": "CCM1", "ubicacion_x": 230.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.765},
+    {"id": "C1", "nombre": "Motor C1", "potencia_kW": 90.0,  "rendimiento": 0.88, "cos_phi": 0.905, "tablero_origen": "CCM2", "ubicacion_x": 330.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.765},
+    {"id": "C2", "nombre": "Motor C2", "potencia_kW": 90.0,  "rendimiento": 0.88, "cos_phi": 0.905, "tablero_origen": "CCM2", "ubicacion_x": 430.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.766},
+    {"id": "C3", "nombre": "Motor C3", "potencia_kW": 90.0,  "rendimiento": 0.88, "cos_phi": 0.905, "tablero_origen": "CCM2", "ubicacion_x": 530.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.767},
+    {"id": "C4", "nombre": "Motor C4", "potencia_kW": 80.0,  "rendimiento": 0.88, "cos_phi": 0.915, "tablero_origen": "CCM2", "ubicacion_x": 240.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.768},
+    {"id": "C5", "nombre": "Motor C5", "potencia_kW": 80.0,  "rendimiento": 0.88, "cos_phi": 0.920, "tablero_origen": "CCM3", "ubicacion_x": 245.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.780},
+    {"id": "C6", "nombre": "Motor C6", "potencia_kW": 80.0,  "rendimiento": 0.88, "cos_phi": 0.925, "tablero_origen": "CCM3", "ubicacion_x": 250.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.785},
+    {"id": "C7", "nombre": "Motor C7", "potencia_kW": 60.0,  "rendimiento": 0.88, "cos_phi": 0.930, "tablero_origen": "CCM3", "ubicacion_x": 255.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.790},
+    {"id": "C8", "nombre": "Motor C8", "potencia_kW": 60.0,  "rendimiento": 0.88, "cos_phi": 0.935, "tablero_origen": "CCM3", "ubicacion_x": 260.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.795},
+    {"id": "C9", "nombre": "Motor C9", "potencia_kW": 60.0,  "rendimiento": 0.88, "cos_phi": 0.935, "tablero_origen": "CCM3", "ubicacion_x": 360.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.800},
+    {"id": "D1", "nombre": "Motor D1", "potencia_kW": 2.238, "rendimiento": 0.88, "cos_phi": 0.915, "tablero_origen": "CCM4", "ubicacion_x": 215.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.775},
+    {"id": "D2", "nombre": "Motor D2", "potencia_kW": 2.238, "rendimiento": 0.88, "cos_phi": 0.920, "tablero_origen": "CCM4", "ubicacion_x": 220.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.780},
+    {"id": "D3", "nombre": "Motor D3", "potencia_kW": 2.238, "rendimiento": 0.88, "cos_phi": 0.925, "tablero_origen": "CCM4", "ubicacion_x": 225.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.785},
+    {"id": "D4", "nombre": "Motor D4", "potencia_kW": 0.746, "rendimiento": 0.88, "cos_phi": 0.930, "tablero_origen": "CCM4", "ubicacion_x": 230.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.790},
+    {"id": "D5", "nombre": "Motor D5", "potencia_kW": 0.746, "rendimiento": 0.88, "cos_phi": 0.935, "tablero_origen": "CCM4", "ubicacion_x": 235.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.795},
+    {"id": "D6", "nombre": "Motor D6", "potencia_kW": 0.746, "rendimiento": 0.88, "cos_phi": 0.940, "tablero_origen": "CCM4", "ubicacion_x": 240.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.800},
+    {"id": "A1", "nombre": "Motor A1", "potencia_kW": 200.0, "rendimiento": 0.88, "cos_phi": 0.850, "tablero_origen": "CCM5", "ubicacion_x": 235.0, "ubicacion_y": 0.0, "factor_utilizacion": 0.770}
+  ],
+  "conductores": [
+    {"origen": "T",    "destino": "TG",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 24.0,   "proteccion": "L. T. + I. D.", "tiempo_s": 0.10, "curva": "C"},
+    {"origen": "TG",   "destino": "CCM1", "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 100.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.10, "curva": "C"},
+    {"origen": "TG",   "destino": "TS4",  "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 15.0,   "proteccion": "L. T. + I. D.", "tiempo_s": 0.20, "curva": "C"},
+    {"origen": "TG",   "destino": "TS3",  "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 100.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.18, "curva": "C"},
+    {"origen": "TS4",  "destino": "CCM2", "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 117.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.44, "curva": "C"},
+    {"origen": "TS4",  "destino": "CCM3", "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 122.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.54, "curva": "C"},
+    {"origen": "TS4",  "destino": "CCM4", "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1027.0, "proteccion": "L. T. + I. D.", "tiempo_s": 0.64, "curva": "C"},
+    {"origen": "CCM1", "destino": "A1",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 326.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.22, "curva": "C"},
+    {"origen": "CCM1", "destino": "B1",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 327.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.24, "curva": "C"},
+    {"origen": "CCM1", "destino": "B2",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 328.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.26, "curva": "C"},
+    {"origen": "CCM1", "destino": "B3",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 329.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.28, "curva": "C"},
+    {"origen": "CCM1", "destino": "B4",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 330.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.30, "curva": "C"},
+    {"origen": "CCM2", "destino": "C1",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 130.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.70, "curva": "C"},
+    {"origen": "CCM2", "destino": "C2",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 131.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.72, "curva": "C"},
+    {"origen": "CCM2", "destino": "C3",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 132.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.74, "curva": "C"},
+    {"origen": "CCM2", "destino": "C4",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 133.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.76, "curva": "C"},
+    {"origen": "CCM3", "destino": "C5",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 140.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.90, "curva": "C"},
+    {"origen": "CCM3", "destino": "C6",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 141.0,  "proteccion": "L. T. + I. D.", "tiempo_s": 0.92, "curva": "C"},
+    {"origen": "CCM3", "destino": "C7",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1042.0, "proteccion": "L. T. + I. D.", "tiempo_s": 0.94, "curva": "C"},
+    {"origen": "CCM3", "destino": "C8",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1043.0, "proteccion": "L. T. + I. D.", "tiempo_s": 0.96, "curva": "C"},
+    {"origen": "CCM3", "destino": "C9",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1044.0, "proteccion": "L. T. + I. D.", "tiempo_s": 0.98, "curva": "C"},
+    {"origen": "CCM4", "destino": "D1",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1051.0, "proteccion": "L. T. + I. D.", "tiempo_s": 1.12, "curva": "C"},
+    {"origen": "CCM4", "destino": "D2",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1052.0, "proteccion": "L. T. + I. D.", "tiempo_s": 1.14, "curva": "C"},
+    {"origen": "CCM4", "destino": "D3",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1053.0, "proteccion": "L. T. + I. D.", "tiempo_s": 1.16, "curva": "C"},
+    {"origen": "CCM4", "destino": "D4",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1054.0, "proteccion": "L. T. + I. D.", "tiempo_s": 1.18, "curva": "C"},
+    {"origen": "CCM4", "destino": "D5",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1055.0, "proteccion": "L. T. + I. D.", "tiempo_s": 1.20, "curva": "C"},
+    {"origen": "CCM4", "destino": "D6",   "tipo": "Syntenax", "disposicion": "Enterrado", "fa": 0.9, "ft": 0.8, "longitud_m": 1056.0, "proteccion": "L. T. + I. D.", "tiempo_s": 1.22, "curva": "C"}
   ]
 }
