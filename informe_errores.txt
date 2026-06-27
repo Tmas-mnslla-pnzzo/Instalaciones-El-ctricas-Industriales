@@ -1,0 +1,146 @@
+======================================================================
+  INFORME DE EJECUCIÓN — generar_excel.py
+  26/06/2026 22:40:27
+======================================================================
+
+RESUMEN: 0 errores | 12 advertencias | 97 pasos OK
+
+──────────────────────────────────────────────────────────────────────
+ADVERTENCIAS (12) — revisar valores
+──────────────────────────────────────────────────────────────────────
+  [WARN]  CCM CCM1 > Motor B1
+         potencia_aparente_kVA=169.934 no coincide con P/cos_phi=188.235
+
+  [WARN]  CCM CCM1 > Motor B2
+         potencia_aparente_kVA=169.934 no coincide con P/cos_phi=188.235
+
+  [WARN]  CCM CCM1 > Motor B3
+         potencia_aparente_kVA=169.934 no coincide con P/cos_phi=188.235
+
+  [WARN]  CCM CCM1 > Motor B4
+         potencia_aparente_kVA=169.934 no coincide con P/cos_phi=188.235
+
+  [WARN]  CCM CCM5 > Motor A1
+         potencia_aparente_kVA=212.417 no coincide con P/cos_phi=235.294
+
+  [WARN]  Conductor T → TG
+         No se encontró corriente para destino 'TG' → se usa fallback 50 A
+
+  [WARN]  Conductor TG → CCM1
+         No se encontró termomagnética para 1032.8A: ⚠️ El valor solicitado (1032.7519735957108) para 'termomagneticas_A' supera el máximo comercial disponible (600). Debe aplicar división de circuitos, celdas adicionales o cables en paralelo.
+
+  [WARN]  Conductor TG → TS4
+         No se encontró corriente para destino 'TS4' → se usa fallback 50 A
+
+  [WARN]  Conductor CCM1 → B1
+         ΔU=5.19% supera el 5% admisible (L=327.0m, Ib=286.0A, S=240.0mm²)
+
+  [WARN]  Conductor CCM1 → B2
+         ΔU=5.21% supera el 5% admisible (L=328.0m, Ib=286.0A, S=240.0mm²)
+
+  [WARN]  Conductor CCM1 → B3
+         ΔU=5.22% supera el 5% admisible (L=329.0m, Ib=286.0A, S=240.0mm²)
+
+  [WARN]  Conductor CCM1 → B4
+         ΔU=5.24% supera el 5% admisible (L=330.0m, Ib=286.0A, S=240.0mm²)
+
+──────────────────────────────────────────────────────────────────────
+PASOS COMPLETADOS (97)
+──────────────────────────────────────────────────────────────────────
+  [OK]    Carga de archivos JSON — datos_proyecto.json cargado OK
+  [OK]    Carga de archivos JSON — datos_iluminacion.json cargado OK
+  [OK]    Carga de archivos JSON — valores_comerciales.json cargado OK
+  [OK]    CCM CCM1 > Motor B1 — Motor B1: Ib=285.994A  Pa=160.000kW  Sa=169.934kVA
+  [OK]    CCM CCM1 > Motor B2 — Motor B2: Ib=285.994A  Pa=160.000kW  Sa=169.934kVA
+  [OK]    CCM CCM1 > Motor B3 — Motor B3: Ib=285.994A  Pa=160.000kW  Sa=169.934kVA
+  [OK]    CCM CCM1 > Motor B4 — Motor B4: Ib=285.994A  Pa=160.000kW  Sa=169.934kVA
+  [OK]    CCM CCM1 > Totales — Banco capacitores: Qc=14.9137 kVAr
+  [OK]    CCM CCM1 > Totales — Total neto: P=640.00kW  S=679.74kVA  I=1032.75A
+  [OK]    CCM CCM1 > Totales — Total corregido (fs=0.8): P=512.00kW  S=543.79kVA  I=826.20A
+  [OK]    CCM CCM2 > Motor C1 — Motor C1: Ib=261.704A  Pa=90.000kW  Sa=99.447kVA
+  [OK]    CCM CCM2 > Motor C2 — Motor C2: Ib=261.704A  Pa=90.000kW  Sa=99.447kVA
+  [OK]    CCM CCM2 > Motor C3 — Motor C3: Ib=261.704A  Pa=90.000kW  Sa=99.447kVA
+  [OK]    CCM CCM2 > Motor C4 — Motor C4: Ib=230.083A  Pa=80.000kW  Sa=87.432kVA
+  [OK]    CCM CCM2 > Totales — Banco capacitores: Qc=37.7229 kVAr
+  [OK]    CCM CCM2 > Totales — Total neto: P=350.00kW  S=385.75kVA  I=586.09A
+  [OK]    CCM CCM2 > Totales — Total corregido (fs=0.8): P=280.00kW  S=308.60kVA  I=468.87A
+  [OK]    CCM CCM3 > Motor C5 — Motor C5: Ib=228.833A  Pa=80.000kW  Sa=86.957kVA
+  [OK]    CCM CCM3 > Motor C6 — Motor C6: Ib=227.596A  Pa=80.000kW  Sa=86.486kVA
+  [OK]    CCM CCM3 > Motor C7 — Motor C7: Ib=169.779A  Pa=60.000kW  Sa=64.516kVA
+  [OK]    CCM CCM3 > Motor C8 — Motor C8: Ib=168.871A  Pa=60.000kW  Sa=64.171kVA
+  [OK]    CCM CCM3 > Motor C9 — Motor C9: Ib=168.871A  Pa=60.000kW  Sa=64.171kVA
+  [OK]    CCM CCM3 > Totales — Banco capacitores: Qc=19.5347 kVAr
+  [OK]    CCM CCM3 > Totales — Total neto: P=340.00kW  S=366.25kVA  I=556.47A
+  [OK]    CCM CCM3 > Totales — Total corregido (fs=0.8): P=272.00kW  S=293.00kVA  I=445.17A
+  [OK]    CCM CCM4 > Motor D1 — Motor D1: Ib=6.437A  Pa=2.238kW  Sa=2.446kVA
+  [OK]    CCM CCM4 > Motor D2 — Motor D2: Ib=6.402A  Pa=2.238kW  Sa=2.432kVA
+  [OK]    CCM CCM4 > Motor D3 — Motor D3: Ib=6.367A  Pa=2.238kW  Sa=2.419kVA
+  [OK]    CCM CCM4 > Motor D4 — Motor D4: Ib=2.111A  Pa=0.746kW  Sa=0.802kVA
+  [OK]    CCM CCM4 > Motor D5 — Motor D5: Ib=2.100A  Pa=0.746kW  Sa=0.798kVA
+  [OK]    CCM CCM4 > Motor D6 — Motor D6: Ib=2.088A  Pa=0.746kW  Sa=0.794kVA
+  [OK]    CCM CCM4 > Totales — Banco capacitores: Qc=0.6508 kVAr
+  [OK]    CCM CCM4 > Totales — Total neto: P=8.95kW  S=9.69kVA  I=14.72A
+  [OK]    CCM CCM4 > Totales — Total corregido (fs=0.85): P=7.61kW  S=8.24kVA  I=12.51A
+  [OK]    CCM CCM5 > Motor A1 — Motor A1: Ib=357.492A  Pa=200.000kW  Sa=212.417kVA
+  [OK]    CCM CCM5 > Totales — Banco capacitores: Qc=4.6601 kVAr
+  [OK]    CCM CCM5 > Totales — Total neto: P=200.00kW  S=212.42kVA  I=322.73A
+  [OK]    CCM CCM5 > Totales — Total corregido (fs=0.8): P=160.00kW  S=169.93kVA  I=258.19A
+  [OK]    Iluminación > TS1 (Rooster Lighting) — P_total=4.332kW  I=19.691A  P_cor=3.899kW
+  [OK]    Iluminación > TS2 (NORKA) — P_total=0.175kW  I=0.798A  P_cor=0.158kW
+  [OK]    Iluminación > TS3 (NORKA) — P_total=1.542kW  I=7.011A  P_cor=1.388kW
+  [OK]    Iluminación > TS5 (NORKA) — P_total=1.232kW  I=5.600A  P_cor=1.109kW
+  [OK]    Iluminación > TS6 (NORKA) — P_total=2.432kW  I=11.055A  P_cor=2.189kW
+  [OK]    Iluminación > TS7 (NORKA) — P_total=3.116kW  I=14.164A  P_cor=2.804kW
+  [OK]    Iluminación > TS8 (NORKA) — P_total=3.420kW  I=15.545A  P_cor=3.078kW
+  [OK]    Conductor T → TG — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 0.35V | Scc_min: 149.5mm2
+  [OK]    Conductor T → TG — ΔU=0.09% ✓  Iz=155.5A  Ib=50.0A
+  [OK]    Conductor TG → CCM1 — Sección: 240.0mm² x5 | Iz total: 858.0A | Caída: 3.49V | Scc_min: 149.5mm2
+  [OK]    Conductor TG → CCM1 — ΔU=0.92% ✓  Iz=1029.6A  Ib=826.2A
+  [OK]    Conductor TG → TS4 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 0.22V | Scc_min: 149.5mm2
+  [OK]    Conductor TG → TS4 — ΔU=0.06% ✓  Iz=155.5A  Ib=50.0A
+  [OK]    Conductor TG → TS3 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 0.21V | Scc_min: 149.5mm2
+  [OK]    Conductor TG → TS3 — ΔU=0.05% ✓  Iz=155.5A  Ib=7.0A
+  [OK]    Conductor TS4 → CCM2 — Sección: 185.0mm² x3 | Iz total: 514.5A | Caída: 4.61V | Scc_min: 149.5mm2
+  [OK]    Conductor TS4 → CCM2 — ΔU=1.21% ✓  Iz=529.2A  Ib=468.9A
+  [OK]    Conductor TS4 → CCM3 — Sección: 240.0mm² x2 | Iz total: 457.6A | Caída: 5.73V | Scc_min: 149.5mm2
+  [OK]    Conductor TS4 → CCM3 — ΔU=1.51% ✓  Iz=411.8A  Ib=445.2A
+  [OK]    Conductor TS4 → CCM4 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 3.78V | Scc_min: 149.5mm2
+  [OK]    Conductor TS4 → CCM4 — ΔU=0.99% ✓  Iz=155.5A  Ib=12.5A
+  [OK]    Conductor CCM1 → A1 — Sección: 185.0mm² x2 | Iz total: 392.0A | Caída: 14.69V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM1 → A1 — ΔU=3.87% ✓  Iz=352.8A  Ib=357.5A
+  [OK]    Conductor CCM1 → B1 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 19.73V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM1 → B2 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 19.79V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM1 → B3 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 19.85V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM1 → B4 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 19.92V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM2 → C1 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 7.18V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM2 → C1 — ΔU=1.89% ✓  Iz=205.9A  Ib=261.7A
+  [OK]    Conductor CCM2 → C2 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 7.23V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM2 → C2 — ΔU=1.90% ✓  Iz=205.9A  Ib=261.7A
+  [OK]    Conductor CCM2 → C3 — Sección: 240.0mm² x1 | Iz total: 286.0A | Caída: 7.29V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM2 → C3 — ΔU=1.92% ✓  Iz=205.9A  Ib=261.7A
+  [OK]    Conductor CCM2 → C4 — Sección: 185.0mm² x1 | Iz total: 245.0A | Caída: 7.71V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM2 → C4 — ΔU=2.03% ✓  Iz=176.4A  Ib=230.1A
+  [OK]    Conductor CCM3 → C5 — Sección: 185.0mm² x1 | Iz total: 245.0A | Caída: 8.07V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM3 → C5 — ΔU=2.12% ✓  Iz=176.4A  Ib=228.8A
+  [OK]    Conductor CCM3 → C6 — Sección: 185.0mm² x1 | Iz total: 245.0A | Caída: 8.09V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM3 → C6 — ΔU=2.13% ✓  Iz=176.4A  Ib=227.6A
+  [OK]    Conductor CCM3 → C7 — Sección: 240.0mm² x2 | Iz total: 457.6A | Caída: 18.67V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM3 → C7 — ΔU=4.91% ✓  Iz=411.8A  Ib=169.8A
+  [OK]    Conductor CCM3 → C8 — Sección: 240.0mm² x2 | Iz total: 457.6A | Caída: 18.58V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM3 → C8 — ΔU=4.89% ✓  Iz=411.8A  Ib=168.9A
+  [OK]    Conductor CCM3 → C9 — Sección: 240.0mm² x2 | Iz total: 457.6A | Caída: 18.6V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM3 → C9 — ΔU=4.90% ✓  Iz=411.8A  Ib=168.9A
+  [OK]    Conductor CCM4 → D1 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 1.99V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM4 → D1 — ΔU=0.52% ✓  Iz=155.5A  Ib=6.4A
+  [OK]    Conductor CCM4 → D2 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 1.98V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM4 → D2 — ΔU=0.52% ✓  Iz=155.5A  Ib=6.4A
+  [OK]    Conductor CCM4 → D3 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 1.97V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM4 → D3 — ΔU=0.52% ✓  Iz=155.5A  Ib=6.4A
+  [OK]    Conductor CCM4 → D4 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 0.65V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM4 → D4 — ΔU=0.17% ✓  Iz=155.5A  Ib=2.1A
+  [OK]    Conductor CCM4 → D5 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 0.65V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM4 → D5 — ΔU=0.17% ✓  Iz=155.5A  Ib=2.1A
+  [OK]    Conductor CCM4 → D6 — Sección: 150.0mm² x1 | Iz total: 216.0A | Caída: 0.65V | Scc_min: 149.5mm2
+  [OK]    Conductor CCM4 → D6 — ΔU=0.17% ✓  Iz=155.5A  Ib=2.1A
+  [OK]    Totales generales — Transformador seleccionado: 2500.0 kVA (S_res=2168.2 kVA)
+  [OK]    Totales generales — P_tot=1555.20kW  S_tot=1667.88kVA  cos_phi=0.9324  S_res=2168.24kVA

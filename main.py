@@ -33,16 +33,14 @@ for motor in planta.cargas:
         ib=corriente_ib,
         longitud_km=longitud_km,
         cos_phi=motor["cos_phi"],
-        icc_max=5000.0, # Cortocircuito estimado (se puede parametrizar luego)
+        icc_max=5000.0, 
         tiempo_cc=0.02,
         delta_u_max=20.0, # 5% de 400V
         catalogo_iz=Conductores.CATALOGO_IZ_BASE
     )
     
-    # E. Ajuste Comercial del Cable
     seccion_comercial = catalogo.obtener_inmediato_superior("secciones_cables_mm2", resultado_cable['seccion_mm2'])
     
-    # F. Registrar en la Memoria Técnica
     seccion_nombre = f"Circuito {motor['id']} - {motor['nombre']}"
     reporte.registrar_parametro(seccion_nombre, "Alimentación desde", motor['tablero_origen'])
     reporte.registrar_parametro(seccion_nombre, "Distancia calculada", f"{round(longitud_km * 1000, 1)} metros")
@@ -51,6 +49,5 @@ for motor in planta.cargas:
     
     print(f"✅ Cable asignado: {resultado_cable['cantidad_de_cables_en_paralelo']} x {seccion_comercial} mm2 a {round(longitud_km * 1000, 1)}m de distancia.")
 
-# 3. Exportamos el reporte final
 print("\n📝 Generando documentación...")
 reporte.exportar_md()
